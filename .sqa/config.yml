@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/argo-ams-library:
+      branch: master
+      repo: https://github.com/ARGOeu/argo-ams-library.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/argo-ams-library git:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-gold-boar.sh
+        container: qc.acc_smelly-plum-anteater
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/argo-ams-library find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-amaranth-woodlouse.sh
+        container: qc.doc_dorky-purple-schnauzer
+      github.com/ARGOeu/argo-ams-library git:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-rose-moth.sh
+        container: qc.doc_nippy-jade-zorse
+      github.com/ARGOeu/argo-ams-library markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-grey-manatee.sh
+        container: qc.doc_hazy-platinum-coati
+      github.com/ARGOeu/argo-ams-library restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-jade-chihuahua.sh
+        container: qc.doc_snoopy-copper-toad
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/argo-ams-library licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-carmine-eagle.sh
+        container: qc.lic_ready-ivory-cattle
+  QC.Sec:
+    repos:
+      github.com/ARGOeu/argo-ams-library bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-auburn-impala.sh
+        container: qc.sec_jumpy-chocolate-pinscher
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/argo-ams-library flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-turquoise-macaque.sh
+        container: qc.sty_wimpy-cerulean-whale
+      github.com/ARGOeu/argo-ams-library hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-vermilion-lizard.sh
+        container: qc.sty_paltry-white-hippopotamus
+  QC.Uni:
+    repos:
+      github.com/ARGOeu/argo-ams-library pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-amethyst-grouse.sh
+        container: qc.uni_wimpy-eggplant-otter
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/argo-ams-library get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-charcoal-wolverine.sh
+        container: qc.ver_paltry-scarlet-magpie
+timeout: 5400
