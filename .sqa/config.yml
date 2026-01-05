@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-ams-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-magnolia-ant.sh
-        container: qc.acc_freaky-tan-dugong
+        - /usr/bin/env sh .sqa/script.lovely-cyan-wombat.sh
+        container: qc.acc_beady-firebrick-gerbil
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-ams-library find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-grey-beagle.sh
-        container: qc.doc_wimpy-aqua-bonobo
+        - /usr/bin/env sh .sqa/script.gimpy-periwinkle-wasp.sh
+        container: qc.doc_woozy-chestnut-ragdoll
       github.com/ARGOeu/argo-ams-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-black-dhole.sh
-        container: qc.doc_baggy-vermilion-audemer
+        - /usr/bin/env sh .sqa/script.cozy-crimson-squirrel.sh
+        container: qc.doc_wheezy-amaranth-walrus
       github.com/ARGOeu/argo-ams-library markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-gold-maltese.sh
-        container: qc.doc_pretty-tomato-loon
+        - /usr/bin/env sh .sqa/script.messy-alizarin-monster.sh
+        container: qc.doc_wimpy-grey-goose
       github.com/ARGOeu/argo-ams-library restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-blue-setter.sh
-        container: qc.doc_skanky-flax-lobster
+        - /usr/bin/env sh .sqa/script.ugly-turquoise-chinook.sh
+        container: qc.doc_ready-heliotrope-rottweiler
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-ams-library licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-turquoise-capybara.sh
-        container: qc.lic_lousy-blue-spitz
+        - /usr/bin/env sh .sqa/script.hasty-corn-lion.sh
+        container: qc.lic_flabby-firebrick-urchin
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-ams-library bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-red-buzzard.sh
-        container: qc.sec_boozy-myrtle-leopard
+        - /usr/bin/env sh .sqa/script.geeky-bronze-mongoose.sh
+        container: qc.sec_homey-ultramarine-mau
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-ams-library flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-charcoal-kakapo.sh
-        container: qc.sty_freaky-ruby-dachshund
+        - /usr/bin/env sh .sqa/script.gimpy-seashell-booby.sh
+        container: qc.sty_pokey-grey-fowl
       github.com/ARGOeu/argo-ams-library hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-plum-mongrel.sh
-        container: qc.sty_hazy-pink-zebu
+        - /usr/bin/env sh .sqa/script.woolly-crimson-deer.sh
+        container: qc.sty_pokey-vermilion-raccoon
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-ams-library pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-pear-chicken.sh
-        container: qc.uni_leaky-pear-gharial
+        - /usr/bin/env sh .sqa/script.lousy-smalt-tiger.sh
+        container: qc.uni_cheeky-zucchini-bombay
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-ams-library get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-thistle-foxhound.sh
-        container: qc.ver_ready-green-penguin
+        - /usr/bin/env sh .sqa/script.squirrely-indigo-squirrel.sh
+        container: qc.ver_seedy-ecru-whale
 timeout: 5400
